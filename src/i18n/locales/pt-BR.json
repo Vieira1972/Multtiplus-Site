@@ -1,0 +1,201 @@
+{
+    "header": {
+        "brandName": "Multtiplus Technologies",
+        "nav": {
+            "home": "Início",
+            "services": "Serviços",
+            "partners": "Parceiros",
+            "about": "Sobre",
+            "contact": "Contato"
+        },
+        "cta": "Fale Conosco"
+    },
+    "hero": {
+        "badge": "Soluções integradas para seu negócio",
+        "title": {
+            "line1": "Transformando desafios tecnológicos em",
+            "highlight": "soluções robustas"
+        },
+        "subtitle": "impulsione o crescimento de sua empresa acompanhando as evoluções tecnológicas",
+        "ctaPrimary": "Nossos Serviços",
+        "ctaSecondary": "Saiba Mais"
+    },
+    "services": {
+        "kicker": "Segmentos de negócio",
+        "title": "Nossos Serviços",
+        "subtitle": "Solução completa para cada segmento de negócio",
+        "cardCta": "Saiba mais",
+        "items": [
+            {
+                "title": "Restaurante & Fast Food",
+                "description": "Solução sob medida para gestão completa da operação de restaurante e atendimento na modalidade delivery — com PDV, gestão de comanda de mesa, cardápio digital, controle de estoque, gestão de fornecedores, programação de cozinha, CRM etc."
+            },
+            {
+                "title": "Serviços",
+                "description": "Tecnologia para organizar processos, equipes, contratos e entregas de serviços."
+            },
+            {
+                "title": "Distribuição",
+                "description": "Controle de operações, logística, estoque e indicadores para redes de distribuição."
+            },
+            {
+                "title": "Varejo",
+                "description": "Soluções para vendas, atendimento, estoque e integração entre canais."
+            },
+            {
+                "title": "Indústria",
+                "description": "Apoio tecnológico para processos produtivos, qualidade, custos e rastreabilidade."
+            },
+            {
+                "title": "Governo",
+                "description": "Funcionalidades críticas de RH, administrativo-financeiro, gestão de estoque, gestão de obras e gestão de projetos. Garantimos controle gerencial integrado por nível de acesso e compliance completo."
+            }
+        ]
+    },
+    "customServices": {
+        "kicker": "Serviços sob demanda",
+        "title": "Serviços personalizados conforme demanda",
+        "subtitle": "Combinamos plataformas, desenvolvimento, dados, processos e infraestrutura para criar soluções aderentes ao contexto de cada cliente.",
+        "items": [
+            {
+                "title": "Projeto de customizações na plataforma Odoo"
+            },
+            {
+                "title": "Desenvolvimento de projetos LLM, mineração e conversação de dados em alto volume"
+            },
+            {
+                "title": "Desenvolvimento de aplicações sob medida",
+                "items": [
+                    "Python / Odoo",
+                    "Java",
+                    "Oracle APEX",
+                    ".NET"
+                ]
+            },
+            {
+                "title": "Engenharia de processos organizacionais",
+                "items": [
+                    "BPMN",
+                    "Mineração de processos",
+                    "Consultoria de reestruturação de áreas"
+                ]
+            },
+            {
+                "title": "Prestação de serviço nas modalidade:",
+                "items": [
+                    "Body Shop",
+                    "Outsourcing"
+                ]
+            },
+            {
+                "title": "Projetos de infraestrutura computacional e cloud",
+                "items": [
+                    "AWS",
+                    "Azure",
+                    "GCP",
+                    "Oracle"
+                ]
+            },
+            {
+                "title": "Administração de bancos de dados"
+            }
+        ]
+    },
+    "partners": {
+        "kicker": "Alianças estratégicas",
+        "title": "Principais parceiros, alianças tecnológica e de negócio",
+        "subtitle": "Conectamos tecnologia, plataformas e parceiros estratégicos para ampliar o valor entregue aos clientes.",
+        "note": "",
+        "items": {
+            "p1": "AWS",
+            "p2": "Azure",
+            "p3": "Google",
+            "p4": "Apix Tech",
+            "p5": "TIS Angola",
+            "p6": "Clarity Tec"
+        }
+    },
+    "about": {
+        "title": "Multtiplus Technologies",
+        "body": "Fundada em julho de 2017, a Multtiplus Technologies atua como integradora especializada no desenvolvimento de projetos de Tecnologia da Informação com foco em soluções de gestão empresarial. Ao longo de sua trajetória, a empresa consolidou expertise no atendimento tanto do segmento privado quanto do segmento público, aplicando governança de TI, métricas de desempenho e práticas ágeis para garantir eficiência operacional, transparência nos processos e rastreabilidade das entregas.\n\nDiferencia-se pela abordagem centrada na colaboração e na formação de parcerias estratégicas de produto e serviço. Cada projeto é tratado de forma personalizada, considerando os requisitos regulatórios, as necessidades de compliance e os objetivos de negócio específicos de cada cliente — do setor privado ao governo. Dessa forma, a Multtiplus transforma desafios tecnológicos em soluções robustas, escaláveis e de valor tangível, sem renunciar à adaptabilidade e aderência aos negócios e aos propósitos dos nossos clientes.",
+        "bullets": [
+            "Governança de TI",
+            "Práticas ágeis",
+            "Compliance e rastreabilidade",
+            "Parcerias estratégicas"
+        ],
+        "cta": "Saiba Mais"
+    },
+    "contact": {
+        "kicker": "Contato",
+        "title": "Vamos conversar sobre seu projeto?",
+        "subtitle": "Entre em contato conosco para saber como podemos colaborar com a sua empresa.",
+        "info": {
+            "emailLabel": "Email",
+            "phoneLabel": "Telefone / WhatsApp",
+            "mapPlaceholder": "Mapa (em breve)",
+            "emailClickText": "Clique aqui para mandar um email",
+            "phoneClickText": "Clique aqui pelo WhatsApp"
+        },
+        "form": {
+            "name": "Nome Completo",
+            "company": "Empresa",
+            "email": "E-mail Corporativo",
+            "phone": "Telefone / WhatsApp",
+            "message": "Mensagem",
+            "submit": "Enviar Mensagem",
+            "submitWhatsApp": "Enviar via WhatsApp",
+            "submitEmail": "Enviar via E-mail",
+            "redirectWhatsApp": "Você será redirecionado para o WhatsApp",
+            "consentLabel": "Li e concordo com o tratamento dos meus dados conforme a ",
+            "consentError": "Você deve concordar com a Política de Privacidade para continuar.",
+            "privacyLink": "Política de Privacidade",
+            "successTitle": "Sucesso!",
+            "successMessage": "Mensagem enviada com sucesso! Entraremos em contato em breve."
+        }
+    },
+    "footer": {
+        "tagline": "Transformando desafios tecnológicos em soluções robustas, escaláveis e alinhadas aos objetivos de cada cliente.",
+        "quickLinksTitle": "Links Rápidos",
+        "servicesTitle": "Serviços",
+        "contactTitle": "Contato",
+        "legalTitle": "Legal",
+        "privacy": "Política de Privacidade",
+        "cookies": "Política de Cookies",
+        "terms": "Termos de Uso",
+        "copyright": "© 2024 Multtiplus. Todos os direitos reservados."
+    },
+    "legal": {
+        "version": "Versão",
+        "updated": "Atualizado"
+    },
+    "privacy": {
+        "kicker": "Privacidade",
+        "title": "Política de Privacidade",
+        "subtitle": "Nosso compromisso com a segurança, transparência e proteção de dados em conformidade com a LGPD.",
+        "downloadPdf": "Baixar PDF",
+        "buildingPdf": "Gerando PDF...",
+        "backToSite": "Voltar ao site"
+    },
+    "cookies": {
+        "kicker": "Cookies",
+        "title": "Política de Cookies",
+        "subtitle": "Transparência sobre o uso de tecnologias de rastreamento para melhorar sua experiência em nosso site.",
+        "downloadPdf": "Baixar PDF",
+        "backToSite": "Voltar ao site"
+    },
+    "terms": {
+        "kicker": "Termos",
+        "title": "Termos de Uso",
+        "subtitle": "Regras e diretrizes para o uso do nosso site e serviços.",
+        "downloadPdf": "Baixar PDF",
+        "backToSite": "Voltar ao site"
+    },
+    "cookieBanner": {
+        "title": "Cookies e Privacidade",
+        "body": "Usamos cookies para melhorar sua experiência e analisar o tráfego. Você pode aceitar ou recusar.",
+        "accept": "Aceitar",
+        "decline": "Recusar",
+        "link": "Saiba mais"
+    }
+}
