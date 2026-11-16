@@ -74,10 +74,11 @@
 
   .hero-kicker-sf {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'San Francisco', 'Helvetica Neue', sans-serif !important;
-    font-weight: 600;
+    font-weight: 700 !important;
     font-size: 0.95rem !important;
     letter-spacing: 0.01em;
     line-height: 1.25;
+    color: #1F2937 !important;
   }
 
   @media (min-width: 640px) {

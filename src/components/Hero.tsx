@@ -17,7 +17,7 @@ export const Hero = () => {
                 <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center">
 
                     {/* Badge */}
-                    <div className="homepage-kicker hero-kicker-sf mb-6 animate-fade-in-up">
+                    <div className="homepage-kicker hero-kicker-sf font-bold mb-6 animate-fade-in-up">
                         {t('hero.badge')}
                     </div>
 
