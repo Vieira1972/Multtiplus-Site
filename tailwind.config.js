@@ -25,6 +25,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
         handwritten: ['Caveat', 'cursive'],
+        sf: ['"SF Pro Display"', '-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"SF Pro"', '"San Francisco"', '"Helvetica Neue"', 'sans-serif'],
       },
     },
   },
