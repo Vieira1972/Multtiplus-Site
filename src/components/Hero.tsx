@@ -22,7 +22,7 @@ export const Hero = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="odoo-title w-full max-w-5xl text-center text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl mb-6 animate-fade-in-up delay-100">
+                    <h1 className="odoo-title text-[#1781ab] w-full max-w-5xl text-center text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl mb-6 animate-fade-in-up delay-100">
                         <span className="block">{titleLineOne}</span>
                         <span className="block text-[0.95em] lg:whitespace-nowrap lg:-translate-x-1 xl:-translate-x-2">
                             {titleLineTwoLead} {t('hero.title.highlight')}
