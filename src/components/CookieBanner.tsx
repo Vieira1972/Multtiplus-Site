@@ -49,7 +49,7 @@ export const CookieBanner = () => {
                         </button>
                         <button
                             onClick={handleAccept}
-                            className="flex-1 md:flex-none bg-[#714B67] hover:bg-[#5F3F58] text-white font-bold py-2.5 px-6 rounded-lg transition-all shadow-lg hover:shadow-[#714B67]/20 whitespace-nowrap"
+                            className="flex-1 md:flex-none bg-[#1781ab] hover:bg-[#136c90] text-white font-semibold py-2.5 px-6 rounded-lg transition-all shadow-lg hover:shadow-[#1781ab]/20 whitespace-nowrap"
                         >
                             {t('cookieBanner.accept')}
                         </button>

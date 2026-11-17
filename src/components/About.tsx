@@ -39,7 +39,7 @@ export const About = () => {
                         </div>
 
                         {/* Decoration */}
-                        <div className="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-[#714B67]/10 rounded-2xl hidden lg:block"></div>
+                        <div className="absolute -z-10 top-10 -right-10 w-full h-full border-2 border-[#1781ab]/15 rounded-2xl hidden lg:block"></div>
                     </div>
 
                     {/* Content Column */}
@@ -61,7 +61,7 @@ export const About = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                             {[0, 1, 2, 3].map((index) => (
                                 <div key={index} className="flex items-center gap-3">
-                                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[#714B67] shadow-sm">
+                                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white flex items-center justify-center text-[#1781ab] shadow-sm">
                                         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                         </svg>
@@ -71,7 +71,7 @@ export const About = () => {
                             ))}
                         </div>
 
-                        <a href="#contact" className="bg-[#714B67] hover:bg-[#5F3F58] text-white font-bold py-3.5 px-8 rounded-full transition-all shadow-lg transform hover:-translate-y-1 inline-block text-center">
+                        <a href="#contact" className="bg-[#1781ab] hover:bg-[#136c90] text-white font-semibold py-3.5 px-8 rounded-full transition-all shadow-md hover:shadow-lg hover:shadow-[#1781ab]/25 transform hover:-translate-y-0.5 inline-block text-center">
                             {t('about.cta')}
                         </a>
                     </div>

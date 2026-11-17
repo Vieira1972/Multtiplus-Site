@@ -7,21 +7,21 @@ export const LanguageSwitch = () => {
         <div className="flex items-center gap-2">
             <button
                 onClick={() => setLang('pt-BR')}
-                className={`text-sm font-medium ${lang === 'pt-BR' ? 'text-[#714B67]' : 'text-gray-400 hover:text-white'}`}
+                className={`text-sm font-medium ${lang === 'pt-BR' ? 'text-[#1781ab]' : 'text-gray-500 hover:text-[#1781ab]'}`}
             >
                 PT
             </button>
             <span className="text-gray-600">|</span>
             <button
                 onClick={() => setLang('en')}
-                className={`text-sm font-medium ${lang === 'en' ? 'text-[#714B67]' : 'text-gray-400 hover:text-white'}`}
+                className={`text-sm font-medium ${lang === 'en' ? 'text-[#1781ab]' : 'text-gray-500 hover:text-[#1781ab]'}`}
             >
                 EN
             </button>
             <span className="text-gray-600">|</span>
             <button
                 onClick={() => setLang('es')}
-                className={`text-sm font-medium ${lang === 'es' ? 'text-[#714B67]' : 'text-gray-400 hover:text-white'}`}
+                className={`text-sm font-medium ${lang === 'es' ? 'text-[#1781ab]' : 'text-gray-500 hover:text-[#1781ab]'}`}
             >
                 ES
             </button>

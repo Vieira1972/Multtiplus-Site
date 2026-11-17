@@ -28,7 +28,7 @@ const ScrollToHash = () => {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white font-sans antialiased text-brand-dark selection:bg-[#714B67]/20">
+      <div className="min-h-screen bg-white font-sans antialiased text-brand-dark selection:bg-[#1781ab]/20 selection:text-[#1781ab]">
         <ScrollToHash />
         <CookieBanner />
         <BackToTopButton />

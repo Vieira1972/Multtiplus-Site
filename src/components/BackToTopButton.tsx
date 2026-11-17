@@ -31,7 +31,7 @@ export const BackToTopButton = () => {
             type="button"
             onClick={scrollToTop}
             aria-label="Back to top"
-            className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[9999] p-3 md:p-4 rounded-full bg-brand-dark hover:bg-[#714B67] text-white shadow-2xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#714B67] focus:ring-offset-2 flex items-center justify-center
+            className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[9999] p-3 md:p-4 rounded-full bg-brand-dark hover:bg-[#1781ab] text-white shadow-2xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1781ab] focus:ring-offset-2 flex items-center justify-center
             ${isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}
             `}
         >

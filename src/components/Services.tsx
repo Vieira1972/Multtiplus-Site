@@ -71,7 +71,7 @@ const ServiceCard = ({ imageSrc, imagePosition, title, description, cta }: { ima
         className="w-full max-w-[22.5rem] h-full bg-white rounded-2xl p-3 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100/80 group cursor-pointer hover:-translate-y-1 overflow-hidden flex flex-col"
     >
         <div className="px-5 pt-5">
-            <h3 className="font-handwritten text-3xl sm:text-[2rem] font-bold leading-none text-brand-dark mb-5 group-hover:text-odoo-purple transition-colors duration-300">
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-brand-dark mb-4 group-hover:text-[#1781ab] transition-colors duration-300">
                 {title}
             </h3>
         </div>
@@ -88,7 +88,7 @@ const ServiceCard = ({ imageSrc, imagePosition, title, description, cta }: { ima
             <p className="text-gray-500 text-sm leading-relaxed">
                 {description}
             </p>
-            <div className="mt-auto pt-6 flex items-center text-odoo-purple font-semibold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <div className="mt-auto pt-6 flex items-center text-[#1781ab] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 {cta} <span className="ml-2">-&gt;</span>
             </div>
         </div>

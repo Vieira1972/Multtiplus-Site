@@ -81,7 +81,7 @@ const PartnerCard = ({ name, logo, href, logoPanelVariant, delay }: Partner & { 
     const cardClassName = "bg-white rounded-2xl p-7 md:p-8 min-h-[180px] shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100/80 group flex flex-col items-center justify-center hover:-translate-y-1 animate-fade-in-up";
     const cardContent = (
         <>
-            <div className={`w-full h-24 md:h-28 mb-5 rounded-2xl border flex items-center justify-center px-7 py-6 transition-all duration-300 group-hover:border-odoo-purple/25 ${panelClassName}`}>
+            <div className={`w-full h-24 md:h-28 mb-5 rounded-2xl border flex items-center justify-center px-7 py-6 transition-all duration-300 group-hover:border-[#1781ab]/30 ${panelClassName}`}>
                 {imageFailed ? (
                     <span className="text-base font-semibold text-brand-dark text-center">
                         {name}
@@ -97,7 +97,7 @@ const PartnerCard = ({ name, logo, href, logoPanelVariant, delay }: Partner & { 
                 )}
             </div>
 
-            <h3 className="text-base font-semibold text-brand-dark text-center group-hover:text-odoo-purple transition-colors duration-300">
+            <h3 className="text-base font-semibold text-brand-dark text-center group-hover:text-[#1781ab] transition-colors duration-300">
                 {name}
             </h3>
         </>
