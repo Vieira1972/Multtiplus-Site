@@ -13,33 +13,43 @@ export const Hero = () => {
             id="home" 
             className="relative min-h-screen flex items-center pt-32 overflow-hidden bg-white text-gray-900"
         >
+            {/* Ambient Background Glow */}
+            <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-gradient-to-b from-[#1781ab]/10 via-[#2EAADC]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
+
             <div className="w-[calc(100%-48px)] max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center">
 
                     {/* Badge */}
-                    <div className="homepage-kicker hero-kicker-sf font-bold mb-6 animate-fade-in-up">
+                    <div className="hero-kicker-sf mb-6 animate-fade-in-up">
+                        <span className="w-2 h-2 rounded-full bg-[#1781ab] animate-pulse mr-1"></span>
                         {t('hero.badge')}
                     </div>
 
                     {/* Headline */}
-                    <h1 className="odoo-title text-[#1781ab] w-full max-w-5xl text-center text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl mb-6 animate-fade-in-up delay-100">
+                    <h1 className="hero-title-sf text-[#1781ab] w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up delay-100">
                         <span className="block">{titleLineOne}</span>
-                        <span className="block text-[0.95em] lg:whitespace-nowrap lg:-translate-x-1 xl:-translate-x-2">
+                        <span className="block text-[0.96em] lg:whitespace-nowrap">
                             {titleLineTwoLead} {t('hero.title.highlight')}
                         </span>
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="section-subtitle hero-subtitle-sf font-bold mb-10 max-w-2xl animate-fade-in-up delay-200">
+                    <p className="hero-subtitle-sf mb-10 max-w-2xl animate-fade-in-up delay-200">
                         {t('hero.subtitle')}
                     </p>
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up delay-300">
-                        <a href="#services" className="bg-[#714B67] hover:bg-[#5F3F58] text-white font-bold py-3.5 px-8 rounded-full transition-all shadow-lg transform hover:-translate-y-1 block text-center sm:inline-block">
+                        <a 
+                            href="#services" 
+                            className="bg-[#1781ab] hover:bg-[#136c90] text-white font-semibold py-3.5 px-8 rounded-full transition-all shadow-md hover:shadow-lg hover:shadow-[#1781ab]/25 transform hover:-translate-y-0.5 block text-center sm:inline-block"
+                        >
                             {t('hero.ctaPrimary')}
                         </a>
-                        <a href="#contact" className="bg-[#F3F4F6] hover:bg-[#E9ECEF] border border-[#E5E7EB] text-[#714B67] font-medium py-3.5 px-8 rounded-full transition-all block text-center sm:inline-block">
+                        <a 
+                            href="#contact" 
+                            className="bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 text-gray-700 font-medium py-3.5 px-8 rounded-full transition-all shadow-sm transform hover:-translate-y-0.5 block text-center sm:inline-block"
+                        >
                             {t('hero.ctaSecondary')}
                         </a>
                     </div>

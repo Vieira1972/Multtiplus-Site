@@ -39,15 +39,19 @@
 @layer components {
   .font-handwritten,
   .hero-handwritten,
-  .heading-handwritten,
-  .odoo-title {
+  .heading-handwritten {
     font-family: 'Caveat', cursive;
     font-weight: 700;
     letter-spacing: 0;
   }
 
-  .odoo-title {
-    @apply text-[#1781ab] leading-[0.98];
+  .odoo-title,
+  .hero-title-sf {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'San Francisco', 'Helvetica Neue', sans-serif !important;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    color: #1781ab;
   }
 
   .section-pill,
@@ -73,32 +77,39 @@
   }
 
   .hero-kicker-sf {
+    display: inline-flex !important;
+    align-items: center !important;
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'San Francisco', 'Helvetica Neue', sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 0.95rem !important;
-    letter-spacing: 0.01em;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.02em;
     line-height: 1.25;
-    color: #1F2937 !important;
+    color: #1781ab !important;
+    background: rgba(23, 129, 171, 0.08) !important;
+    border: 1px solid rgba(23, 129, 171, 0.25) !important;
+    padding: 0.4rem 1.15rem !important;
+    border-radius: 9999px !important;
   }
 
   @media (min-width: 640px) {
     .hero-kicker-sf {
-      font-size: 1rem !important;
+      font-size: 0.9375rem !important;
     }
   }
 
   .hero-subtitle-sf {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'San Francisco', 'Helvetica Neue', sans-serif !important;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
     letter-spacing: -0.01em;
-    color: #374151 !important;
+    color: #4B5563 !important;
     font-size: 1.125rem !important;
-    line-height: 1.45 !important;
+    line-height: 1.6 !important;
   }
 
   @media (min-width: 640px) {
     .hero-subtitle-sf {
       font-size: 1.25rem !important;
+      font-weight: 400 !important;
     }
   }
 

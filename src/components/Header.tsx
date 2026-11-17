@@ -57,11 +57,11 @@ export const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center justify-center gap-8">
-                        <button onClick={() => handleNavigation('home')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#714B67] text-left">{t('header.nav.home')}</button>
-                        <button onClick={() => handleNavigation('services')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#714B67] text-left">{t('header.nav.services')}</button>
-                        <button onClick={() => handleNavigation('partners')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#714B67] text-left">{t('header.nav.partners')}</button>
-                        <button onClick={() => handleNavigation('about')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#714B67] text-left">{t('header.nav.about')}</button>
-                        <button onClick={() => handleNavigation('contact')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#714B67] text-left">{t('header.nav.contact')}</button>
+                        <button onClick={() => handleNavigation('home')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#1781ab] text-left">{t('header.nav.home')}</button>
+                        <button onClick={() => handleNavigation('services')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#1781ab] text-left">{t('header.nav.services')}</button>
+                        <button onClick={() => handleNavigation('partners')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#1781ab] text-left">{t('header.nav.partners')}</button>
+                        <button onClick={() => handleNavigation('about')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#1781ab] text-left">{t('header.nav.about')}</button>
+                        <button onClick={() => handleNavigation('contact')} className="font-medium transition-colors duration-300 text-sm uppercase tracking-wide text-gray-600 hover:text-[#1781ab] text-left">{t('header.nav.contact')}</button>
                     </nav>
 
                     {/* Right Side Actions */}
