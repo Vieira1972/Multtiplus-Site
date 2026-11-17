@@ -8,7 +8,7 @@ export const About = () => {
     const paragraphs = t('about.body').split('\n\n');
 
     return (
-        <section className="relative py-36 lg:py-48 bg-brand-light">
+        <section className="relative py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-20 xl:gap-32">
 
@@ -89,7 +89,7 @@ export const About = () => {
                 >
                     <path
                         d="M0,120 L1440,120 L1440,60 C960,0 480,0 0,60 Z"
-                        fill="#ffffff"
+                        fill="#F5F5F7"
                     />
                 </svg>
             </div>

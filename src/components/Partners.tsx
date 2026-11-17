@@ -22,12 +22,12 @@ export const Partners = () => {
     ];
 
     return (
-        <section className="relative py-36 lg:py-48 bg-brand-light">
+        <section className="relative py-24 lg:py-32 bg-brand-light">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Editorial section header */}
                 <div id="partners" className="scroll-anchor" aria-hidden="true" />
-                <div className="text-center max-w-3xl mx-auto mb-24">
+                <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="homepage-kicker mb-4">
                         {t('partners.kicker')}
                     </span>
@@ -64,7 +64,7 @@ export const Partners = () => {
                 >
                     <path
                         d="M0,120 L1440,120 L1440,60 C960,0 480,0 0,60 Z"
-                        fill="#F5F5F7"
+                        fill="#ffffff"
                     />
                 </svg>
             </div>

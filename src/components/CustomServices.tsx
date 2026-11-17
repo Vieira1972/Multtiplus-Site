@@ -10,7 +10,7 @@ export const CustomServices = () => {
     }));
 
     return (
-        <section className="relative py-36 lg:py-48 bg-white">
+        <section className="relative py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-12 xl:gap-20 items-start">
                     <div className="lg:sticky lg:top-32">

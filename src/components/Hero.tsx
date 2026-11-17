@@ -14,7 +14,7 @@ export const Hero = () => {
             className="relative min-h-screen flex items-center pt-32 overflow-hidden bg-white text-gray-900"
         >
             {/* Ambient Background Glow */}
-            <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-gradient-to-b from-[#1781ab]/10 via-[#2EAADC]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
+            <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-gradient-to-b from-[#1781ab]/10 via-[#1781ab]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
 
             <div className="w-[calc(100%-48px)] max-w-7xl mx-auto px-6 md:px-8 relative z-10">
                 <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center">
@@ -26,10 +26,10 @@ export const Hero = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="hero-title-sf text-[#1781ab] w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up delay-100">
+                    <h1 className="hero-title-sf text-brand-dark w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up delay-100">
                         <span className="block">{titleLineOne}</span>
                         <span className="block text-[0.96em] lg:whitespace-nowrap">
-                            {titleLineTwoLead} {t('hero.title.highlight')}
+                            {titleLineTwoLead} <span className="text-[#1781ab]">{t('hero.title.highlight')}</span>
                         </span>
                     </h1>
 
