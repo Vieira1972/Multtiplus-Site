@@ -70,7 +70,7 @@ export const Header = () => {
                             <LanguageSwitch />
                             <button
                                 onClick={() => handleNavigation('contact')}
-                                className="px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:-translate-y-0.5 bg-tech-blue hover:bg-tech-blue-hover text-white shadow-lg"
+                                className="px-6 py-2 rounded-full font-bold text-sm transition-all transform hover:-translate-y-0.5 bg-[#1781ab] hover:bg-[#136c90] text-white shadow-lg"
                             >
                                 {t('header.cta')}
                             </button>
@@ -118,7 +118,7 @@ export const Header = () => {
                     <LanguageSwitch />
                     <button
                         onClick={() => { setIsMobileMenuOpen(false); handleNavigation('contact'); }}
-                        className="w-full py-3 rounded-full font-bold text-sm bg-tech-blue hover:bg-tech-blue-hover text-white shadow-lg"
+                        className="w-full py-3 rounded-full font-bold text-sm bg-[#1781ab] hover:bg-[#136c90] text-white shadow-lg"
                     >
                         {t('header.cta')}
                     </button>
