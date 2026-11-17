@@ -52,7 +52,7 @@ export const About = () => {
                             {t('about.title')}
                         </h2>
 
-                        <div className="space-y-5 text-lg text-gray-500 mb-10 leading-relaxed">
+                        <div className="space-y-5 text-lg text-gray-600 mb-10 leading-relaxed">
                             {paragraphs.map((paragraph) => (
                                 <p key={paragraph}>{paragraph}</p>
                             ))}
@@ -66,7 +66,7 @@ export const About = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
-                                    <span className="font-medium text-brand-dark text-sm">{t(`about.bullets.${index}`)}</span>
+                                    <span className="font-medium text-brand-dark text-[0.9375rem]">{t(`about.bullets.${index}`)}</span>
                                 </div>
                             ))}
                         </div>

@@ -34,7 +34,7 @@ export const Hero = () => {
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="hero-subtitle-sf mb-10 max-w-2xl animate-fade-in-up delay-200">
+                    <p className="hero-subtitle-sf mb-10 max-w-3xl text-balance animate-fade-in-up delay-200">
                         {t('hero.subtitle')}
                     </p>
 

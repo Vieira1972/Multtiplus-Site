@@ -85,7 +85,7 @@ const ServiceCard = ({ imageSrc, imagePosition, title, description, cta }: { ima
             />
         </div>
         <div className="px-5 pb-5 flex flex-col flex-1">
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-600 text-[0.9375rem] leading-relaxed">
                 {description}
             </p>
             <div className="mt-auto pt-6 flex items-center text-[#1781ab] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">

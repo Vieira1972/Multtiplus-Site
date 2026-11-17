@@ -27,7 +27,7 @@ export const Partners = () => {
 
                 {/* Editorial section header */}
                 <div id="partners" className="scroll-anchor" aria-hidden="true" />
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <div className="text-center max-w-4xl mx-auto mb-16">
                     <span className="homepage-kicker mb-4">
                         {t('partners.kicker')}
                     </span>

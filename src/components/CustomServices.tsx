@@ -12,7 +12,7 @@ export const CustomServices = () => {
     return (
         <section className="relative py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-[0.82fr_1.18fr] gap-12 xl:gap-20 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.25fr] gap-12 xl:gap-20 items-start">
                     <div className="lg:sticky lg:top-32">
                         <span className="homepage-kicker mb-5">
                             {t('customServices.kicker')}
@@ -29,7 +29,7 @@ export const CustomServices = () => {
                         {categories.map((category, index) => (
                             <div
                                 key={category.title}
-                                className="service-card group"
+                                className={`service-card group ${index === categories.length - 1 && categories.length % 2 === 1 ? "md:col-span-2" : ""}`}
                                 style={{ animationDelay: `${index * 45}ms` }}
                             >
                                 <div className="flex items-start gap-3.5">
