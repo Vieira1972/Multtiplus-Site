@@ -28,7 +28,7 @@
         "items": [
             {
                 "title": "Restaurante & Fast Food",
-                "description": "Solução sob medida para gestão completa da operação de restaurante e atendimento na modalidade delivery — com PDV, gestão de comanda de mesa, cardápio digital, controle de estoque, gestão de fornecedores, programação de cozinha, CRM etc."
+                "description": "Gestão completa de restaurantes e delivery: PDV, comandas, cardápio digital, estoque, cozinha e CRM."
             },
             {
                 "title": "Serviços",
@@ -117,7 +117,7 @@
     },
     "about": {
         "title": "Multtiplus Technologies",
-        "body": "Fundada em julho de 2017, a Multtiplus Technologies atua como integradora especializada no desenvolvimento de projetos de Tecnologia da Informação com foco em soluções de gestão empresarial. Ao longo de sua trajetória, a empresa consolidou expertise no atendimento tanto do segmento privado quanto do segmento público, aplicando governança de TI, métricas de desempenho e práticas ágeis para garantir eficiência operacional, transparência nos processos e rastreabilidade das entregas.\n\nDiferencia-se pela abordagem centrada na colaboração e na formação de parcerias estratégicas de produto e serviço. Cada projeto é tratado de forma personalizada, considerando os requisitos regulatórios, as necessidades de compliance e os objetivos de negócio específicos de cada cliente — do setor privado ao governo. Dessa forma, a Multtiplus transforma desafios tecnológicos em soluções robustas, escaláveis e de valor tangível, sem renunciar à adaptabilidade e aderência aos negócios e aos propósitos dos nossos clientes.",
+        "body": "Fundada em 2017, a Multtiplus Technologies é uma integradora especializada em projetos de TI com foco em gestão empresarial. Atendemos os setores privado e público com governança de TI, métricas de desempenho e práticas ágeis, garantindo eficiência, transparência e rastreabilidade das entregas.\n\nTrabalhamos de forma colaborativa, com parcerias estratégicas e projetos personalizados que respeitam os requisitos regulatórios e os objetivos de cada cliente — transformando desafios tecnológicos em soluções robustas, escaláveis e de valor tangível.",
         "bullets": [
             "Governança de TI",
             "Práticas ágeis",

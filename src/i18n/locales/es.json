@@ -28,7 +28,7 @@
         "items": [
             {
                 "title": "Restaurante & Fast Food",
-                "description": "Solución a medida para la gestión completa de operaciones de restaurantes y atención en modalidad delivery — con POS, gestión de comandas de mesa, menú digital, control de inventario, gestión de proveedores, programación de cocina, CRM y más."
+                "description": "Gestión completa de restaurantes y delivery: POS, comandas, menú digital, inventario, cocina y CRM."
             },
             {
                 "title": "Servicios",
@@ -117,7 +117,7 @@
     },
     "about": {
         "title": "Multtiplus Technologies",
-        "body": "Fundada en julio de 2017, Multtiplus Technologies actúa como una integradora especializada en el desarrollo de proyectos de Tecnología de la Información con foco en soluciones de gestión empresarial. A lo largo de su trayectoria, la empresa ha consolidado experiencia atendiendo tanto al sector privado como al sector público, aplicando gobernanza de TI, métricas de desempeño y prácticas ágiles para garantizar eficiencia operativa, transparencia en los procesos y trazabilidad de las entregas.\n\nMulttiplus se diferencia por un enfoque centrado en la colaboración y en la formación de alianzas estratégicas de producto y servicio. Cada proyecto se trata de forma personalizada, considerando los requisitos regulatorios, las necesidades de compliance y los objetivos de negocio específicos de cada cliente — desde el sector privado hasta el gobierno. De esta forma, Multtiplus transforma desafíos tecnológicos en soluciones robustas, escalables y de valor tangible, sin renunciar a la adaptabilidad y alineación con los negocios y propósitos de nuestros clientes.",
+        "body": "Fundada en 2017, Multtiplus Technologies es una integradora especializada en proyectos de TI con foco en gestión empresarial. Atendemos a los sectores privado y público con gobernanza de TI, métricas de desempeño y prácticas ágiles, garantizando eficiencia, transparencia y trazabilidad de las entregas.\n\nTrabajamos de forma colaborativa, con alianzas estratégicas y proyectos personalizados que respetan los requisitos regulatorios y los objetivos de cada cliente — transformando desafíos tecnológicos en soluciones robustas, escalables y de valor tangible.",
         "bullets": [
             "Gobernanza de TI",
             "Prácticas ágiles",

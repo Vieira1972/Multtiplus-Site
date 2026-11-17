@@ -28,7 +28,7 @@
         "items": [
             {
                 "title": "Restaurant & Fast Food",
-                "description": "Tailored solution for complete restaurant operations and delivery management — with POS, table order management, digital menu, inventory control, supplier management, kitchen scheduling, CRM and more."
+                "description": "Complete restaurant and delivery management: POS, table orders, digital menu, inventory, kitchen and CRM."
             },
             {
                 "title": "Services",
@@ -117,7 +117,7 @@
     },
     "about": {
         "title": "Multtiplus Technologies",
-        "body": "Founded in July 2017, Multtiplus Technologies operates as an integrator specialized in the development of Information Technology projects focused on business management solutions. Throughout its journey, the company has consolidated expertise in serving both the private and public sectors, applying IT governance, performance metrics and agile practices to ensure operational efficiency, process transparency and delivery traceability.\n\nMulttiplus stands out through an approach centered on collaboration and the development of strategic product and service partnerships. Each project is handled in a personalized way, considering regulatory requirements, compliance needs and each client’s specific business objectives — from the private sector to government. In this way, Multtiplus transforms technology challenges into robust, scalable solutions with tangible value, while preserving adaptability and alignment with each client’s business and purpose.",
+        "body": "Founded in 2017, Multtiplus Technologies is an integrator specialized in IT projects focused on business management. We serve the private and public sectors with IT governance, performance metrics and agile practices, ensuring efficiency, transparency and delivery traceability.\n\nWe work collaboratively, with strategic partnerships and tailored projects that respect each client’s regulatory requirements and business goals — turning technology challenges into robust, scalable solutions with tangible value.",
         "bullets": [
             "IT governance",
             "Agile practices",
