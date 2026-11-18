@@ -21,7 +21,7 @@ export const Services = () => {
                 {/* Editorial section header */}
                 <div id="services" className="scroll-anchor" aria-hidden="true" />
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="homepage-kicker mb-4">
+                    <span className="homepage-kicker normal-case tracking-normal mb-4">
                         {t('services.kicker')}
                     </span>
                     <h2 className="odoo-section-title mb-6">
