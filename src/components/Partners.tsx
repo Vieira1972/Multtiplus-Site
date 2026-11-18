@@ -16,6 +16,7 @@ export const Partners = () => {
         { name: t('partners.items.p1'), logo: '/partners/aws-logo.png' },
         { name: t('partners.items.p2'), logo: '/partners/azure-logo.png' },
         { name: t('partners.items.p3'), logo: '/partners/google-logo.png' },
+        { name: t('partners.items.p7'), logo: '/partners/odoo-logo.png', href: 'https://www.odoo.com/pt_BR' },
         { name: t('partners.items.p4'), logo: '/partners/APIX%2002.png', href: 'https://apixtech.com.br/pt', logoPanelVariant: 'contrast' },
         { name: t('partners.items.p5'), logo: '/partners/tis-angola.svg', logoPanelVariant: 'contrast' },
         { name: t('partners.items.p6'), logo: '/partners/clarity-tec.png' },
@@ -39,7 +40,7 @@ export const Partners = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div className="flex flex-wrap justify-center gap-6 md:gap-8 [&>*]:w-[calc(50%-12px)] md:[&>*]:w-[calc(33.333%-22px)] lg:[&>*]:w-[calc(25%-24px)]">
                     {partners.map((partner, index) => (
                         <PartnerCard
                             key={partner.name}
