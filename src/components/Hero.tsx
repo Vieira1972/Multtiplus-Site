@@ -21,7 +21,6 @@ export const Hero = () => {
 
                     {/* Badge */}
                     <div className="hero-kicker-sf mb-10 animate-fade-in-up">
-                        <span className="w-2.5 h-2.5 rounded-full bg-[#1781ab] animate-pulse mr-1.5"></span>
                         {t('hero.badge')}
                     </div>
 
