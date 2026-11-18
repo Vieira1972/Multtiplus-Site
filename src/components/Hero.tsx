@@ -26,7 +26,7 @@ export const Hero = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="hero-title-sf text-brand-dark w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 animate-fade-in-up delay-100">
+                    <h1 className="hero-title-sf text-brand-dark w-full max-w-5xl text-center text-[2rem] sm:text-[2.75rem] md:text-[3.25rem] lg:text-[4rem] font-bold tracking-tight mb-8 animate-fade-in-up delay-100">
                         <span className="block">{titleLineOne}</span>
                         <span className="block text-[0.96em] lg:whitespace-nowrap">
                             {titleLineTwoLead} <span className="text-[#1781ab]">{t('hero.title.highlight')}</span>
