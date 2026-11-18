@@ -8,7 +8,7 @@ export const Services = () => {
     const serviceImages = [
         { src: '/Services/Restaurantes.jpg', position: '55% 70%' },
         { src: '/Services/Serviços.jpg', position: '35% 55%' },
-        { src: '/Services/Distribuição.jpg', position: '70% 24%' },
+        { src: '/Services/Saude.jpg', position: '55% 55%' },
         { src: '/Services/Varejo.jpg', position: '50% 42%' },
         { src: '/Services/Industria.jpg', position: '50% 58%' },
         { src: '/Services/Governo.jpg', position: '55% 45%' }
