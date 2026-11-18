@@ -20,13 +20,13 @@ export const Hero = () => {
                 <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center">
 
                     {/* Badge */}
-                    <div className="hero-kicker-sf mb-8 animate-fade-in-up">
+                    <div className="hero-kicker-sf mb-10 animate-fade-in-up">
                         <span className="w-2.5 h-2.5 rounded-full bg-[#1781ab] animate-pulse mr-1.5"></span>
                         {t('hero.badge')}
                     </div>
 
                     {/* Headline */}
-                    <h1 className="hero-title-sf text-brand-dark w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up delay-100">
+                    <h1 className="hero-title-sf text-brand-dark w-full max-w-5xl text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 animate-fade-in-up delay-100">
                         <span className="block">{titleLineOne}</span>
                         <span className="block text-[0.96em] lg:whitespace-nowrap">
                             {titleLineTwoLead} <span className="text-[#1781ab]">{t('hero.title.highlight')}</span>
@@ -34,7 +34,7 @@ export const Hero = () => {
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="hero-subtitle-sf mb-10 max-w-3xl text-balance animate-fade-in-up delay-200">
+                    <p className="hero-subtitle-sf mb-12 max-w-3xl leading-relaxed text-balance animate-fade-in-up delay-200">
                         {t('hero.subtitle')}
                     </p>
 
