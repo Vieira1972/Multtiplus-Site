@@ -83,19 +83,19 @@
     align-items: center !important;
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro', 'San Francisco', 'Helvetica Neue', sans-serif !important;
     font-weight: 600 !important;
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
     letter-spacing: 0.02em;
     line-height: 1.25;
     color: #1781ab !important;
     background: rgba(23, 129, 171, 0.08) !important;
     border: 1px solid rgba(23, 129, 171, 0.25) !important;
-    padding: 0.4rem 1.15rem !important;
+    padding: 0.5rem 1.4rem !important;
     border-radius: 9999px !important;
   }
 
   @media (min-width: 640px) {
     .hero-kicker-sf {
-      font-size: 0.9375rem !important;
+      font-size: 1.125rem !important;
     }
   }
 

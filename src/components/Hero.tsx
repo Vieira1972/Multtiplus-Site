@@ -11,7 +11,7 @@ export const Hero = () => {
     return (
         <section 
             id="home" 
-            className="relative min-h-screen flex items-center pt-32 overflow-hidden bg-white text-gray-900"
+            className="relative min-h-screen flex items-center pt-32 pb-24 md:pb-36 overflow-hidden bg-white text-gray-900"
         >
             {/* Ambient Background Glow */}
             <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[350px] sm:h-[450px] bg-gradient-to-b from-[#1781ab]/10 via-[#1781ab]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
@@ -20,8 +20,8 @@ export const Hero = () => {
                 <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center">
 
                     {/* Badge */}
-                    <div className="hero-kicker-sf mb-6 animate-fade-in-up">
-                        <span className="w-2 h-2 rounded-full bg-[#1781ab] animate-pulse mr-1"></span>
+                    <div className="hero-kicker-sf mb-8 animate-fade-in-up">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#1781ab] animate-pulse mr-1.5"></span>
                         {t('hero.badge')}
                     </div>
 
