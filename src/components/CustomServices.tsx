@@ -3,7 +3,7 @@ import { useI18n } from '../i18n';
 export const CustomServices = () => {
     const { t } = useI18n();
 
-    const subitemCounts = [0, 0, 4, 3, 2, 4, 0];
+    const subitemCounts = [0, 0, 4, 3, 2, 4, 0, 0];
     const categories = subitemCounts.map((subitemCount, index) => ({
         title: t(`customServices.items.${index}.title`),
         items: Array.from({ length: subitemCount }, (_, itemIndex) => t(`customServices.items.${index}.items.${itemIndex}`)),
