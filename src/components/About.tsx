@@ -16,9 +16,9 @@ export const About = () => {
                     <div className="w-full lg:w-1/2 relative">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[5/4] group">
                             <img
-                                src="/Services/meeting.jpg"
-                                alt="Team collaboration"
-                                className="w-full h-full object-cover object-[50%_42%] transform group-hover:scale-105 transition-transform duration-700"
+                                src="/Images/odoo-tela.jpg"
+                                alt="Plataforma Odoo em notebook"
+                                className="w-full h-full object-cover object-[60%_35%] transform group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent"></div>
 
