@@ -144,7 +144,7 @@
         "form": {
             "name": "Nome Completo",
             "company": "Empresa",
-            "email": "E-mail Corporativo",
+            "email": "E-mail Empresarial",
             "phone": "Telefone / WhatsApp",
             "message": "Mensagem",
             "website": "Site da Empresa",
