@@ -42,7 +42,7 @@ export const Contact = () => {
             `Email: ${formData.email}\n` +
             `Telefone: ${formData.phone}\n` +
             `Site: ${formData.website}\n` +
-            `Quantidade de usuários: ${formData.users}\n` +
+            `Quantidade de funcionários: ${formData.users}\n` +
             `Segmento: ${formData.segment}\n` +
             `Consentimento LGPD: Sim\n\n` +
             `Mensagem:\n${formData.message}`;
