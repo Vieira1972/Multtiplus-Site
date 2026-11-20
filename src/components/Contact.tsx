@@ -12,13 +12,16 @@ export const Contact = () => {
         company: '',
         email: '',
         phone: '',
+        website: '',
+        users: '',
+        segment: '',
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
     const [consent, setConsent] = useState(false);
     const [showConsentError, setShowConsentError] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
@@ -38,6 +41,9 @@ export const Contact = () => {
             `Empresa: ${formData.company}\n` +
             `Email: ${formData.email}\n` +
             `Telefone: ${formData.phone}\n` +
+            `Site: ${formData.website}\n` +
+            `Quantidade de usuários: ${formData.users}\n` +
+            `Segmento: ${formData.segment}\n` +
             `Consentimento LGPD: Sim\n\n` +
             `Mensagem:\n${formData.message}`;
 
@@ -45,7 +51,7 @@ export const Contact = () => {
         window.open(`https://wa.me/${operationalContact.whatsapp}?text=${encodedMessage}`, "_blank");
 
         setSubmitted(true);
-        setFormData({ name: '', company: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', company: '', email: '', phone: '', website: '', users: '', segment: '', message: '' });
         setConsent(false);
         setShowConsentError(false);
         setTimeout(() => setSubmitted(false), 5000);
@@ -95,6 +101,11 @@ export const Contact = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <InputField name="email" label={t('contact.form.email')} type="email" value={formData.email} onChange={handleChange} required />
                                         <InputField name="phone" label={t('contact.form.phone')} type="tel" value={formData.phone} onChange={handleChange} />
+                                    </div>
+                                    <InputField name="website" label={t('contact.form.website')} type="text" value={formData.website} onChange={handleChange} placeholder="https://www.suaempresa.com.br" />
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <SelectField name="users" label={t('contact.form.users')} placeholder={t('contact.form.selectPlaceholder')} options={t('contact.form.usersOptions') as unknown as string[]} value={formData.users} onChange={handleChange} />
+                                        <SelectField name="segment" label={t('contact.form.segment')} placeholder={t('contact.form.selectPlaceholder')} options={t('contact.form.segmentOptions') as unknown as string[]} value={formData.segment} onChange={handleChange} />
                                     </div>
 
                                     <div>
@@ -197,9 +208,10 @@ interface InputFieldProps {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     required?: boolean;
+    placeholder?: string;
 }
 
-const InputField = ({ name, label, type = "text", value, onChange, required }: InputFieldProps) => (
+const InputField = ({ name, label, type = "text", value, onChange, required, placeholder }: InputFieldProps) => (
     <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
         <input
@@ -209,6 +221,33 @@ const InputField = ({ name, label, type = "text", value, onChange, required }: I
             value={value}
             onChange={onChange}
             required={required}
+            placeholder={placeholder}
         />
+    </div>
+);
+
+interface SelectFieldProps {
+    name: string;
+    label: string;
+    placeholder: string;
+    options: string[];
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+const SelectField = ({ name, label, placeholder, options, value, onChange }: SelectFieldProps) => (
+    <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+        <select
+            name={name}
+            className={`w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1781ab] focus:ring-2 focus:ring-[#1781ab]/20 outline-none transition-all bg-white ${value ? 'text-gray-900' : 'text-gray-400'}`}
+            value={value}
+            onChange={onChange}
+        >
+            <option value="">{placeholder}</option>
+            {(Array.isArray(options) ? options : []).map((opt) => (
+                <option key={opt} value={opt} className="text-gray-900">{opt}</option>
+            ))}
+        </select>
     </div>
 );
