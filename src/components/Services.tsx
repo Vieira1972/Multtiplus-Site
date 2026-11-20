@@ -27,7 +27,7 @@ export const Services = () => {
                     <h2 className="odoo-section-title mb-6">
                         {t('services.title')}
                     </h2>
-                    <p className="section-subtitle max-w-2xl mx-auto">
+                    <p className="section-subtitle max-w-2xl mx-auto !font-[Inter,sans-serif] !font-semibold !leading-none">
                         {t('services.subtitle')}
                     </p>
                 </div>
