@@ -139,7 +139,9 @@
             "phoneLabel": "Telefone / WhatsApp",
             "mapPlaceholder": "Mapa (em breve)",
             "emailClickText": "Clique aqui para mandar um email",
-            "phoneClickText": "Clique aqui pelo WhatsApp"
+            "phoneClickText": "Clique aqui pelo WhatsApp",
+            "copy": "Copiar",
+            "copied": "Copiado!"
         },
         "form": {
             "name": "Nome Completo",

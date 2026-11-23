@@ -76,8 +76,8 @@ export const Contact = () => {
                         </p>
 
                         <div className="space-y-8">
-                            <ContactInfoItem icon="email" label={t('contact.info.emailLabel')} value={t('contact.info.emailClickText')} href={`mailto:${publicContact.email}`} />
-                            <ContactInfoItem icon="phone" label={t('contact.info.phoneLabel')} value={t('contact.info.phoneClickText')} href={`https://wa.me/${publicContact.phone.replace(/[^0-9]/g, '')}`} />
+                            <ContactInfoItem icon="email" label={t('contact.info.emailLabel')} value={t('contact.info.emailClickText')} href={`mailto:${publicContact.email}`} detail={publicContact.email} copyText={publicContact.email} copyLabel={t('contact.info.copy')} copiedLabel={t('contact.info.copied')} />
+                            <ContactInfoItem icon="phone" label={t('contact.info.phoneLabel')} value={t('contact.info.phoneClickText')} href={`https://wa.me/${operationalContact.whatsapp}`} target="_blank" detail={publicContact.phone} />
                         </div>
                     </div>
 
@@ -168,7 +168,33 @@ export const Contact = () => {
     );
 };
 
-const ContactInfoItem = ({ icon, label, value, href, target }: { icon: 'email' | 'phone'; label: string; value: string; href?: string; target?: string }) => {
+const ContactInfoItem = ({ icon, label, value, href, target, detail, copyText, copyLabel, copiedLabel }: { icon: 'email' | 'phone'; label: string; value: string; href?: string; target?: string; detail?: string; copyText?: string; copyLabel?: string; copiedLabel?: string }) => {
+    const [copied, setCopied] = useState(false);
+    const handleCopy = async () => {
+        if (!copyText) return;
+        try {
+            await navigator.clipboard.writeText(copyText);
+        } catch {
+            const area = document.createElement('textarea');
+            area.value = copyText;
+            document.body.appendChild(area);
+            area.select();
+            document.execCommand('copy');
+            document.body.removeChild(area);
+        }
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+    const extra = (detail || copyText) ? (
+        <div className="flex items-center gap-2 mt-1 ml-16">
+            {detail && <span className="text-sm text-gray-500 select-all break-all">{detail}</span>}
+            {copyText && (
+                <button type="button" onClick={handleCopy} className="text-xs font-medium text-[#1781ab] border border-[#1781ab]/30 rounded-full px-2.5 py-0.5 hover:bg-[#1781ab] hover:text-white transition-colors">
+                    {copied ? copiedLabel : copyLabel}
+                </button>
+            )}
+        </div>
+    ) : null;
     const getIcon = () => {
         if (icon === 'email') return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
         return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>;
@@ -176,6 +202,7 @@ const ContactInfoItem = ({ icon, label, value, href, target }: { icon: 'email' |
 
     if (href) {
         return (
+            <div>
             <a href={href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined} className="flex items-start gap-4 group cursor-pointer hover:opacity-90">
                 <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 flex items-center justify-center text-[#1781ab] flex-shrink-0 group-hover:bg-[#1781ab] group-hover:text-white transition-colors duration-300">
                     {getIcon()}
@@ -185,6 +212,8 @@ const ContactInfoItem = ({ icon, label, value, href, target }: { icon: 'email' |
                     <div className="text-brand-dark font-semibold text-lg group-hover:text-[#1781ab] transition-colors duration-300">{value}</div>
                 </div>
             </a>
+            {extra}
+            </div>
         );
     }
 

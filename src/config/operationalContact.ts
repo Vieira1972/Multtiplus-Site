@@ -1,4 +1,4 @@
 export const operationalContact = {
     email: "contato@multtiplus.com.br",
-    whatsapp: "554788086817"
+    whatsapp: "5547988086817"
 };
