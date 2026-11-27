@@ -2,21 +2,27 @@
 import { useI18n } from '../i18n';
 import { publicContact } from '../config/publicContact';
 import { operationalContact } from '../config/operationalContact';
+import { EMPLOYEE_RANGES, SEGMENTS, type EmployeeRange, type Segment } from '../config/leadOptions';
+import { buildLeadPayload, submitLead } from '../services/leadService';
+
+const EMPTY_FORM = {
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    website: '',
+    users: '' as EmployeeRange | '',
+    segment: '' as Segment | '',
+    message: '',
+    hp: '',
+};
 
 export const Contact = () => {
     // EDIT TEXTS IN: src/i18n/locales/pt-BR.json | en.json | es.json
     // Keys used here: contact.kicker, contact.title, contact.subtitle, contact.info.*, contact.form.*
-    const { t } = useI18n();
-    const [formData, setFormData] = useState({
-        name: '',
-        company: '',
-        email: '',
-        phone: '',
-        website: '',
-        users: '',
-        segment: '',
-        message: ''
-    });
+    const { t, lang } = useI18n();
+    const [formData, setFormData] = useState(EMPTY_FORM);
+    const [sending, setSending] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [consent, setConsent] = useState(false);
     const [showConsentError, setShowConsentError] = useState(false);
@@ -31,8 +37,9 @@ export const Contact = () => {
         if (e.target.checked) setShowConsentError(false);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (sending) return;
         if (!formData.name || !formData.email || !formData.message) return;
         if (!consent) { setShowConsentError(true); return; }
 
@@ -42,16 +49,43 @@ export const Contact = () => {
             `Email: ${formData.email}\n` +
             `Telefone: ${formData.phone}\n` +
             `Site: ${formData.website}\n` +
-            `Quantidade de funcionários: ${formData.users}\n` +
-            `Segmento: ${formData.segment}\n` +
+            `Quantidade de funcionários: ${formData.users ? t(`contact.form.usersOptions.${formData.users}`) : ''}\n` +
+            `Segmento: ${formData.segment ? t(`contact.form.segmentOptions.${formData.segment}`) : ''}\n` +
             `Consentimento LGPD: Sim\n\n` +
             `Mensagem:\n${formData.message}`;
+        const whatsappUrl = `https://wa.me/${operationalContact.whatsapp}?text=${encodeURIComponent(text)}`;
 
-        const encodedMessage = encodeURIComponent(text);
-        window.open(`https://wa.me/${operationalContact.whatsapp}?text=${encodedMessage}`, "_blank");
+        // Open the tab now, while we are still inside the click: browsers block
+        // window.open() called after an await. It is pointed at WhatsApp below.
+        const whatsappTab = window.open('', '_blank');
+        if (whatsappTab) whatsappTab.opener = null;
+
+        setSending(true);
+        const result = await submitLead(buildLeadPayload({
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone,
+            website: formData.website,
+            employeeRange: formData.users,
+            segment: formData.segment,
+            message: formData.message,
+            honeypot: formData.hp,
+        }, lang));
+        setSending(false);
+        if (result.status === 'failed') {
+            // The contact still reaches us through WhatsApp.
+            console.warn('Lead not sent to Odoo:', result.error);
+        }
+
+        if (whatsappTab) {
+            whatsappTab.location.href = whatsappUrl;
+        } else {
+            window.location.href = whatsappUrl;
+        }
 
         setSubmitted(true);
-        setFormData({ name: '', company: '', email: '', phone: '', website: '', users: '', segment: '', message: '' });
+        setFormData(EMPTY_FORM);
         setConsent(false);
         setShowConsentError(false);
         setTimeout(() => setSubmitted(false), 5000);
@@ -104,8 +138,16 @@ export const Contact = () => {
                                     </div>
                                     <InputField name="website" label={t('contact.form.website')} type="text" value={formData.website} onChange={handleChange} placeholder="https://www.suaempresa.com.br" />
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <SelectField name="users" label={t('contact.form.users')} placeholder={t('contact.form.selectPlaceholder')} options={t('contact.form.usersOptions') as unknown as string[]} value={formData.users} onChange={handleChange} />
-                                        <SelectField name="segment" label={t('contact.form.segment')} placeholder={t('contact.form.selectPlaceholder')} options={t('contact.form.segmentOptions') as unknown as string[]} value={formData.segment} onChange={handleChange} />
+                                        <SelectField name="users" label={t('contact.form.users')} placeholder={t('contact.form.selectPlaceholder')} options={EMPLOYEE_RANGES.map(key => ({ value: key, label: t(`contact.form.usersOptions.${key}`) }))} value={formData.users} onChange={handleChange} />
+                                        <SelectField name="segment" label={t('contact.form.segment')} placeholder={t('contact.form.selectPlaceholder')} options={SEGMENTS.map(key => ({ value: key, label: t(`contact.form.segmentOptions.${key}`) }))} value={formData.segment} onChange={handleChange} />
+                                    </div>
+
+                                    {/* Honeypot: hidden from people, filled by bots. Odoo discards leads where it is not empty. */}
+                                    <div className="absolute -left-[10000px] w-px h-px overflow-hidden" aria-hidden="true">
+                                        <label>
+                                            Fax
+                                            <input type="text" name="hp" tabIndex={-1} autoComplete="off" value={formData.hp} onChange={handleChange} />
+                                        </label>
                                     </div>
 
                                     <div>
@@ -151,11 +193,11 @@ export const Contact = () => {
                                     <p className="text-sm text-gray-400 mb-2 opacity-80">{t('contact.form.redirectWhatsApp')}</p>
                                     <button
                                         type="submit"
-                                        disabled={!consent}
-                                        className={`w-full bg-[#1781ab] hover:bg-[#136c90] text-white font-semibold py-3.5 rounded-full shadow-md hover:shadow-lg hover:shadow-[#1781ab]/25 transform active:scale-[0.99] transition-all flex items-center justify-center gap-2 ${!consent ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
+                                        disabled={!consent || sending}
+                                        className={`w-full bg-[#1781ab] hover:bg-[#136c90] text-white font-semibold py-3.5 rounded-full shadow-md hover:shadow-lg hover:shadow-[#1781ab]/25 transform active:scale-[0.99] transition-all flex items-center justify-center gap-2 ${!consent || sending ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}
                                     >
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" /></svg>
-                                        {t('contact.form.submitWhatsApp')}
+                                        {sending ? t('contact.form.sending') : t('contact.form.submitWhatsApp')}
                                     </button>
                                 </form>
                             )}
@@ -259,7 +301,7 @@ interface SelectFieldProps {
     name: string;
     label: string;
     placeholder: string;
-    options: string[];
+    options: { value: string; label: string }[];
     value: string;
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
@@ -274,8 +316,8 @@ const SelectField = ({ name, label, placeholder, options, value, onChange }: Sel
             onChange={onChange}
         >
             <option value="">{placeholder}</option>
-            {(Array.isArray(options) ? options : []).map((opt) => (
-                <option key={opt} value={opt} className="text-gray-900">{opt}</option>
+            {options.map((opt) => (
+                <option key={opt.value} value={opt.value} className="text-gray-900">{opt.label}</option>
             ))}
         </select>
     </div>
