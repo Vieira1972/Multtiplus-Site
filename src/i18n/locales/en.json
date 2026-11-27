@@ -100,8 +100,12 @@
             {
                 "title": "Database administration"
             },
-            { "title": "Complex Project Management" },
-            { "title": "Technology and/or business training" }
+            {
+                "title": "Complex Project Management"
+            },
+            {
+                "title": "Technology and/or business training"
+            }
         ]
     },
     "partners": {
@@ -153,10 +157,25 @@
             "users": "Number of Employees",
             "segment": "Business Segment",
             "selectPlaceholder": "Select...",
-            "usersOptions": ["01 to 05", "06 to 10", "11 to 25", "26 to 50", "More than 50"],
-            "segmentOptions": ["Retail and Commerce (physical or e-commerce)", "Industry and Manufacturing", "Logistics", "Services", "Hospitality", "Food Service", "Events"],
+            "usersOptions": {
+                "1-5": "01 to 05",
+                "6-10": "06 to 10",
+                "11-25": "11 to 25",
+                "26-50": "26 to 50",
+                "50+": "More than 50"
+            },
+            "segmentOptions": {
+                "retail": "Retail and Commerce (physical or e-commerce)",
+                "industry": "Industry and Manufacturing",
+                "logistics": "Logistics",
+                "services": "Services",
+                "hospitality": "Hospitality",
+                "food_service": "Food Service",
+                "events": "Events"
+            },
             "submit": "Send Message",
             "submitWhatsApp": "Send via WhatsApp",
+            "sending": "Sending...",
             "submitEmail": "Send via Email",
             "redirectWhatsApp": "You will be redirected to WhatsApp",
             "consentLabel": "I have read and agree to the processing of my data according to the ",

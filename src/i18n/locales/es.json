@@ -100,8 +100,12 @@
             {
                 "title": "Administración de bases de datos"
             },
-            { "title": "Gestión de Proyectos Complejos" },
-            { "title": "Capacitaciones en tecnología y/o negocios" }
+            {
+                "title": "Gestión de Proyectos Complejos"
+            },
+            {
+                "title": "Capacitaciones en tecnología y/o negocios"
+            }
         ]
     },
     "partners": {
@@ -153,10 +157,25 @@
             "users": "Cantidad de Empleados",
             "segment": "Segmento de Actuación",
             "selectPlaceholder": "Seleccione...",
-            "usersOptions": ["De 01 a 05", "De 06 a 10", "De 11 a 25", "De 26 a 50", "Más de 50"],
-            "segmentOptions": ["Comercio y Retail (físico o e-commerce)", "Industria y Manufactura", "Logística", "Servicios", "Hotelería", "Gastronomía", "Eventos"],
+            "usersOptions": {
+                "1-5": "De 01 a 05",
+                "6-10": "De 06 a 10",
+                "11-25": "De 11 a 25",
+                "26-50": "De 26 a 50",
+                "50+": "Más de 50"
+            },
+            "segmentOptions": {
+                "retail": "Comercio y Retail (físico o e-commerce)",
+                "industry": "Industria y Manufactura",
+                "logistics": "Logística",
+                "services": "Servicios",
+                "hospitality": "Hotelería",
+                "food_service": "Gastronomía",
+                "events": "Eventos"
+            },
             "submit": "Enviar Mensaje",
             "submitWhatsApp": "Enviar por WhatsApp",
+            "sending": "Enviando...",
             "submitEmail": "Enviar por Correo",
             "redirectWhatsApp": "Serás redirigido a WhatsApp",
             "consentLabel": "He leído y acepto el tratamiento de mis datos según la ",
